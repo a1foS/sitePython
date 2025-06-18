@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site da Sofis</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            background-color:darkgray;
+        }
+        
+        h1 {
+            color: black;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        
+        h3 {
+            color:rgb(53, 0, 139);
+            font-size: 40px;
+        }
+        
+        .nomeVisitante  {
+            color: darkred;
+            font-size: 50px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        
+        .botao {
+            height: 30px;
+            width: 200px;
+            background-color:darkred;
+            color: aliceblue;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        
+        .botao:hover {
+            background-color:darkred ;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <h1>Bem vindo ao meu site</h1>
+    <h3>Este site é sobre rock</h3>
+    <p>Bem vindo(a)</p>
+    <p id="visitante" class="nomeVisitante">Aguardando...</p>
+
+    <a href="https://www.youtube.com/watch?v=iywaBOMvYLI"><img src="85d4f96f105fe5dda7e366fcaa555817.jpg" alt=""></a>
+    <br>
+    <a href="https://www.youtube.com/watch?v=eBG7P-K-r1Y">Clique no Link</a>
+
+    <h3>Cadastro</h3>
+    <label>Nome</label>
+    <br>
+    <input type="text">
+    <br>    
+    <label>Sobrenome</label>
+    <br>
+    <input type="text">
+    <br>
+    <br>
+    <button onclick="enviar()" class="botao">Enviar</button>
+
+    <script>
+        function enviar() {
+            alert("Cadastro feito com sucesso!")
+        }
+        
+        //Variável para pegar o nome do visitante
+        var usuario = prompt ("Digite o seu nome")
+        
+        //Pegar o valor da variável e imprimir na tela
+        document.getElementById('visitante').innerHTML = usuario
+    </script>
+    </center>
+</body>
+</html>
